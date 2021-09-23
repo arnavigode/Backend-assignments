@@ -1,0 +1,219 @@
+mrunmayigode@Mrunmayis-MBP mongo % mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("8db8a52c-db4d-49c4-b25b-ba9a44b29f3f") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-09-23T15:37:25.708+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> db
+test
+> use trial1
+switched to db trial1
+> db.users.insertMany([{name: "arnavi"}, {name: "mrunmayi"}, {name: "vinod"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("614c73eab05b5bccf32a6ad2"),
+                ObjectId("614c73eab05b5bccf32a6ad3"),
+                ObjectId("614c73eab05b5bccf32a6ad4")
+        ]
+}
+> db.users.find()
+{ "_id" : ObjectId("614c73eab05b5bccf32a6ad2"), "name" : "arnavi" }
+{ "_id" : ObjectId("614c73eab05b5bccf32a6ad3"), "name" : "mrunmayi" }
+{ "_id" : ObjectId("614c73eab05b5bccf32a6ad4"), "name" : "vinod" }
+> 
+> 
+> db.users.find({name: "arnavi"}).pretty()
+{ "_id" : ObjectId("614c73eab05b5bccf32a6ad2"), "name" : "arnavi" }
+> db.users.find({name: "arnavi"}).count()
+1
+> mongo
+uncaught exception: ReferenceError: mongo is not defined :
+@(shell):1:1
+> use collection
+switched to db collection
+> db.users.insert({first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insertMany([{first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"},{first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"},{first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}])^C
+bye
+mrunmayigode@Mrunmayis-MBP mongo % db.users.find()
+function> 
+mrunmayigode@Mrunmayis-MBP mongo % mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("23ba0947-7680-4cd8-ad5d-109ec74a7d5f") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-09-23T15:37:25.708+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> clear
+uncaught exception: ReferenceError: clear is not defined :
+@(shell):1:1
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> use collection
+switched to db collection
+> 
+> db.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"} ])
+{ db.users.insertMany([{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"},)
+... {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},
+... {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"},
+... {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},
+... {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"},
+... {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}
+... ]^C
+
+> [{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"},
+... {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},
+... {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"},
+... {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},
+... {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"},
+... {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}
+... db.users.insertMany([{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"},) {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"}, {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"}, {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"}, {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"} ]^C
+
+> [{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"},
+... {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},
+... {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"},
+... {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},
+... {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"},
+... {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"}
+... db.users.insertMany([{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"},) {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"}, {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"}, {first_name: "bhjasgk", last_name: "Gsfe", email:"ljksk@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"}, {first_name: "bvghv", last_name: "Gsfe", email:"nknb@gmail.com", gender: "female", ip_address: "hhsg2637", age: "28"}, {first_name: "Arnavi", last_name: "Gode", email:"arn@gmail.com", gender: "Female", ip_address: "abcd123", age: "25"} ]^C
+
+> db.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs"db.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs"db.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gendb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876"^Cage: "21"} ])
+bye
+mrunmayigode@Mrunmayis-MBP mongo % mongo 
+Modb.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"}, {first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"}, {first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age:^C22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"}   ])
+bye
+mrunmayigode@Mrunmayis-MBP mongo % use collection
+zsh: command not found: use
+mrunmayigode@Mrunmayis-MBP mongo % mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("9e3a8bd1-8538-4046-a49b-56afa92872cc") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-09-23T15:37:25.708+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> 
+> use collection
+switched to db collection
+> db.users.insertMany([{first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"}, {first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"}, {first_name: "Abcdi", last_name: "Gsfe", email:"abcn@gmail.com", gender: "male", ip_address: "abcd124443", age: "22"},{first_name: "qwer", last_name: "asdfs", email:"njhyfv@gmail.com", gender: "female", ip_address: "ags2465876", age: "21"}   ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("614c93ddb341e45656e126c1"),
+                ObjectId("614c93ddb341e45656e126c2"),
+                ObjectId("614c93ddb341e45656e126c3"),
+                ObjectId("614c93ddb341e45656e126c4"),
+                ObjectId("614c93ddb341e45656e126c5"),
+                ObjectId("614c93ddb341e45656e126c6")
+        ]
+}
+> db.users.find()
+{ "_id" : ObjectId("614c7798b05b5bccf32a6ad5"), "first_name" : "Arnavi", "last_name" : "Gode", "email" : "arn@gmail.com", "gender" : "Female", "ip_address" : "abcd123", "age" : "25" }
+{ "_id" : ObjectId("614c7b7a216c37df6cd2226b"), "first_name" : "Abcdi", "last_name" : "Gsfe", "email" : "abcn@gmail.com", "gender" : "male", "ip_address" : "abcd124443", "age" : "22" }
+{ "_id" : ObjectId("614c7b7a216c37df6cd2226c"), "first_name" : "qwer", "last_name" : "asdfs", "email" : "njhyfv@gmail.com", "gender" : "female", "ip_address" : "ags2465876", "age" : "21" }
+{ "_id" : ObjectId("614c7ba3216c37df6cd2226d"), "first_name" : "qwer", "last_name" : "asdfs", "email" : "njhyfv@gmail.com", "gender" : "female", "ip_address" : "ags2465876", "age" : "21" }
+{ "_id" : ObjectId("614c93ddb341e45656e126c1"), "first_name" : "Abcdi", "last_name" : "Gsfe", "email" : "abcn@gmail.com", "gender" : "male", "ip_address" : "abcd124443", "age" : "22" }
+{ "_id" : ObjectId("614c93ddb341e45656e126c2"), "first_name" : "qwer", "last_name" : "asdfs", "email" : "njhyfv@gmail.com", "gender" : "female", "ip_address" : "ags2465876", "age" : "21" }
+{ "_id" : ObjectId("614c93ddb341e45656e126c3"), "first_name" : "Abcdi", "last_name" : "Gsfe", "email" : "abcn@gmail.com", "gender" : "male", "ip_address" : "abcd124443", "age" : "22" }
+{ "_id" : ObjectId("614c93ddb341e45656e126c4"), "first_name" : "qwer", "last_name" : "asdfs", "email" : "njhyfv@gmail.com", "gender" : "female", "ip_address" : "ags2465876", "age" : "21" }
+{ "_id" : ObjectId("614c93ddb341e45656e126c5"), "first_name" : "Abcdi", "last_name" : "Gsfe", "email" : "abcn@gmail.com", "gender" : "male", "ip_address" : "abcd124443", "age" : "22" }
+{ "_id" : ObjectId("614c93ddb341e45656e126c6"), "first_name" : "qwer", "last_name" : "asdfs", "email" : "njhyfv@gmail.com", "gender" : "female", "ip_address" : "ags2465876", "age" : "21" }
+> 
+> 
+> db.users.findOne({first_name : "Arnavi"})
+{
+        "_id" : ObjectId("614c7798b05b5bccf32a6ad5"),
+        "first_name" : "Arnavi",
+        "last_name" : "Gode",
+        "email" : "arn@gmail.com",
+        "gender" : "Female",
+        "ip_address" : "abcd123",
+        "age" : "25"
+}
+> 
+> 
+> db.users.update({_id" : ObjectId("614c7798b05b5bccf32a6ad5")}, {first_name : "Arnavi Gode"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:20
+> db.users.update({"_id" : ObjectId("614c7798b05b5bccf32a6ad5")}, {first_name : "Arnavi Gode"})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> 
